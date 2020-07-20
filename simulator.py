@@ -697,7 +697,7 @@ def execinstruction(instruction):
 
 	# tcs transfer carry subtract
 
-	if binary_number == "11111001":
+	if binary_string == "11111001":
 		if registers[2] == 0:
 			registers[1] = 9
 		if registers[2] == 1:
@@ -740,8 +740,7 @@ stack = [0, 0, 0, "ignorethis"]
 
 file = open("program.bin", "r")
 print(((statuscharacters[0])[0])[1])
-((statuscharacters[0])[0])[1] = 0xE
-((statuscharacters[0])[0])[2] = 0xA
+
 print(str(statuscharacters[0][0]) + " !!!!!!!!!!")
 print(statuscharacters[0][0])
 instructionarray = []
@@ -760,8 +759,7 @@ registers = [0] * 21
 selectedrammemorychip = 0
 selectedrommemorychip = 0
 
-registers[1] = 0b1110
-registers[2] = 0b1
+
 print(str(registers) + " eeeeeeeeeeeeeee " + str(bin(registers[1])))
 # eip = register 0
 # accumulator = register 1
